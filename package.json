@@ -19,6 +19,7 @@
   "homepage": "https://github.com/au-tom-atic/tyso-discord-bot#readme",
   "dependencies": {
     "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.16",
     "pubsubhubbub": "^1.0.1",
     "youtube-notification": "^1.1.0"

@@ -21,7 +21,7 @@ notifier.setup();
 notifier.on('notified', data => {
   console.log('New Video');
   console.log(`${data.channel.name} just uploaded a new video titled: ${data.video.title}`)
-  client.channels.get(config.discord_channel).send(`${data.channel.name} just uploaded a new video titled: ${data.video.title}. watch it at: ${data.video.link}`)
+  client.channels.cache.get(config.discord_channel).send(`${data.channel.name} just uploaded a new video titled: ${data.video.title}. watch it at: ${data.video.link}`)
 });
  
 notifier.subscribe(config.subs);

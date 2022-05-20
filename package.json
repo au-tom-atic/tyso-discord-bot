@@ -22,6 +22,7 @@
     "dotenv": "^16.0.1",
     "nodemon": "^2.0.16",
     "pubsubhubbub": "^1.0.1",
+    "sequelize": "^6.19.2",
     "youtube-notification": "^1.1.0"
   }
 }

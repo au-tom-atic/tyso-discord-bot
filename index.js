@@ -1,7 +1,7 @@
-var pubSubHubbub = require("pubsubhubbub");
 const Discord = require("discord.js");
 const dotenv = require("dotenv");
 const config  = require("./config.json");
+const sequelize = require("./sequelize");
 const { post } = require('axios');
 const urllib = require('url');
 const qs = require('querystring');
@@ -11,7 +11,15 @@ const YouTubeNotifier = require('youtube-notification');
 dotenv.config();
 
 client.once("ready", async () => {
-    console.log('discord bot ready to send notifications')
+    console.log('discord bot ready to send notifications');
+    try {
+        sequelize.sync();
+        console.log("Database connected!");
+    } catch (error) {
+        console.log(error.message);
+        process.exit(1);
+    }
+    console.log("ready for commands with prefix " + prefix);
 });
 
 client.login(process.env.DISCORD_BOT);

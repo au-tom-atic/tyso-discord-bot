@@ -7,7 +7,11 @@ const YouTubeNotifier = require('youtube-notification');
 
 dotenv.config();
 
-console.log(config.subs)
+client.once("ready", async () => {
+    console.log('discord bot ready to send notifications')
+});
+
+client.login(process.env.DISCORD_BOT);
 
 const notifier = new YouTubeNotifier({
   hubCallback: `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`,
@@ -25,12 +29,4 @@ notifier.on('notified', data => {
 });
  
 notifier.subscribe(config.subs);
-
-
-client.once("ready", async () => {
-    console.log('discord bot ready to send notifications')
-});
-
-client.login(process.env.DISCORD_BOT);
-
 

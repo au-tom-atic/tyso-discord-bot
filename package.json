@@ -1,0 +1,22 @@
+{
+  "name": "tyso-discord-bot",
+  "version": "1.0.0",
+  "description": "bot for the Take Your Shoes Off Podcast Discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/au-tom-atic/tyso-discord-bot.git"
+  },
+  "author": "Thomas Leavy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/au-tom-atic/tyso-discord-bot/issues"
+  },
+  "homepage": "https://github.com/au-tom-atic/tyso-discord-bot#readme",
+  "dependencies": {
+    "youtube-notification": "^1.1.0"
+  }
+}

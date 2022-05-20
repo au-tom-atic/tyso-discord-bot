@@ -9,7 +9,7 @@ dotenv.config();
 
 const notifier = new YouTubeNotifier({
   hubCallback: `https://${process.env.HEROKU_APP_NAME}.herokuapp.com/youtube`,
-  port: 3000,
+  port: process.env.PORT,
   path: '/youtube'
 });
 

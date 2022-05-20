@@ -25,6 +25,8 @@ notifier.on('notified', data => {
   let channel = client.channels.cache.find(channel => channel.name === config.discord_channel)
   channel.send(`${data.channel.name} just uploaded a new video titled: ${data.video.title}. watch it at: ${data.video.link}`)
 });
- 
+
+console.log("subing...")
 notifier.subscribe(config.subs);
+console.log("subbed...")
 

@@ -18,6 +18,10 @@ const notifier = new YouTubeNotifier({
   port: process.env.PORT
 });
 
+notifier.setup();
+
+notifier.subscribe(config.subs);
+
 notifier.on('subscribe', data => {
     console.log('Subscribed');
     console.log(data);
@@ -28,6 +32,4 @@ notifier.on('notified', data => {
   let channel = client.channels.cache.find(channel => channel.name === config.discord_channel)
   channel.send(`${data.channel.name} just uploaded a new video titled: ${data.video.title}. watch it at: ${data.video.link}`)
 });
-
-notifier.subscribe(config.subs);
 

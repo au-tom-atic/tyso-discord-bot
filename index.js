@@ -12,6 +12,7 @@ client.once("ready", async () => {
     notifier.setup();
     for(sub in config.subs)
     {
+        console.log(sub);
         notifier.subscribe(sub);
     }
 });

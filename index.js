@@ -10,9 +10,10 @@ dotenv.config();
 client.once("ready", async () => {
     console.log('discord bot ready to send notifications')
     notifier.setup();
-    console.log("subing...")
-    notifier.subscribe(config.subs);
-    console.log("subbed...")
+    for(sub in config.subs)
+    {
+        notifier.subscribe(sub);
+    }
 });
 
 client.login(process.env.DISCORD_BOT);

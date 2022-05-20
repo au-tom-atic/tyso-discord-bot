@@ -16,7 +16,6 @@ client.login(process.env.DISCORD_BOT);
 const notifier = new YouTubeNotifier({
   hubCallback: `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`,
   port: process.env.PORT,
-  Secret: 'scoot doo',
   path: '/youtube'
 });
 

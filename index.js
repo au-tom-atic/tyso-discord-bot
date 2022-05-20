@@ -2,6 +2,9 @@ var pubSubHubbub = require("pubsubhubbub");
 const Discord = require("discord.js");
 const dotenv = require("dotenv");
 const config  = require("./config.json");
+const { post } = require('axios');
+const urllib = require('url');
+const qs = require('querystring');
 const client = new Discord.Client();
 const YouTubeNotifier = require('youtube-notification');
 
@@ -20,7 +23,24 @@ const notifier = new YouTubeNotifier({
 
 notifier.setup();
 
-notifier.subscribe(config.subs);
+//notifier.subscribe(config.subs); //this function call does not work. doing it manually.
+
+for(sub in config.subs)
+{
+    const topic = 'https://www.youtube.com/xml/feeds/videos.xml?channel_id=' + config.subs[sub];
+    const data = {
+      'hub.callback': "https://tyso-discord-bot.herokuapp.com/youtube",
+      'hub.mode': "subscribe",
+      'hub.topic': topic,
+      'hub.verify': "async"
+    };
+
+    post('https://pubsubhubbub.appspot.com/subscribe', qs.stringify(data), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+}
 
 notifier.on('subscribe', data => {
     console.log('Subscribed');

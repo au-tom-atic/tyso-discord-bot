@@ -12,7 +12,7 @@ console.log(config.subs)
 const notifier = new YouTubeNotifier({
   hubCallback: `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`,
   port: process.env.PORT,
-  Secret: 'scoot doo'
+  Secret: 'scoot doo',
   path: '/youtube'
 });
 

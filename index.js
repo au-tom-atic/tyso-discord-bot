@@ -9,16 +9,21 @@ dotenv.config();
 
 client.once("ready", async () => {
     console.log('discord bot ready to send notifications')
+    notifier.setup();
+    console.log("subing...")
+    notifier.subscribe(config.subs);
+    console.log("subbed...")
 });
 
 client.login(process.env.DISCORD_BOT);
 
 const notifier = new YouTubeNotifier({
   hubCallback: `https://${process.env.HEROKU_APP_NAME}.herokuapp.com/youtube`,
-  port: process.env.PORT
+  port: process.env.PORT,
+  path: '/youtube'
 });
 
-notifier.setup();
+
  
 notifier.on('notified', data => {
   console.log(data)
@@ -26,7 +31,5 @@ notifier.on('notified', data => {
   channel.send(`${data.channel.name} just uploaded a new video titled: ${data.video.title}. watch it at: ${data.video.link}`)
 });
 
-console.log("subing...")
-notifier.subscribe(config.subs);
-console.log("subbed...")
+
 

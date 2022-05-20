@@ -4,7 +4,7 @@
   "description": "bot for the Take Your Shoes Off Podcast Discord",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/au-tom-atic/tyso-discord-bot#readme",
   "dependencies": {
+    "nodemon": "^2.0.16",
+    "pubsubhubbub": "^1.0.1",
     "youtube-notification": "^1.1.0"
   }
 }

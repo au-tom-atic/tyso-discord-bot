@@ -18,6 +18,10 @@ module.exports = (sequelize) => {
             allowNull: true,
             type: DataTypes.STRING,
         },
+        published: {
+            allowNull: true,
+            type: DataTypes.DATE
+        }
         
     });
 };

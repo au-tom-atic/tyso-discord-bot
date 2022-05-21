@@ -18,11 +18,16 @@
   },
   "homepage": "https://github.com/au-tom-atic/tyso-discord-bot#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "discord.js": "^12.5.3",
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
     "pubsubhubbub": "^1.0.1",
     "sequelize": "^6.19.2",
+    "sequelize-cli": "^6.4.1",
     "youtube-notification": "^1.1.0"
   }
 }

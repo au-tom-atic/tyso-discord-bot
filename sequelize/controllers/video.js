@@ -17,6 +17,7 @@ async function findVideo(video_id) {
 
 async function updateOrCreate(video_id, newItem) {
     // First try to find the record
+    console.log("update or create video id" + video_id)
     const foundItem = await models.video
         .findOne({ where:{video_id: video_id }})
         .then()

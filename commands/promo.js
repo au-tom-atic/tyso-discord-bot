@@ -9,10 +9,10 @@ module.exports = {
     aliases: ["p"],
     description: "TYSO Promo Codes",
     cooldown: 5,
-    args: true,
-    async execute(message, args)
+    args: false,
+    async execute(message)
     {
-        let weatherEmbeddedResponse = new Discord.MessageEmbed()
+        let promoEmbeddedResponse = new Discord.MessageEmbed()
                     .setColor("#0099ff")
                     .setTitle(`TYSO Promos`)
                     .setAuthor('TYSO Goblin')
@@ -26,12 +26,12 @@ module.exports = {
                     .addFields(
                         {
                             name: "Betterhelp",
-                            value: `betterhelp.com/tyso, offer code TYSO for $10 off your first month`,
+                            value: `https://betterhelp.com/tyso, use offer code TYSO for $10 off your first month`,
                             inline: true,
                         }
                     )
                     .setTimestamp()
                     .setFooter("rickglassman.com/store");
-                message.channel.send(weatherEmbeddedResponse);
+                message.channel.send(promoEmbeddedResponse);
     }
 };

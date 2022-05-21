@@ -14,6 +14,10 @@ module.exports = (sequelize) => {
             allowNull: true,
             type: DataTypes.STRING,
         },
+        video_url:{
+            allowNull: true,
+            type: DataTypes.STRING,
+        },
         channel: {
             allowNull: true,
             type: DataTypes.STRING,

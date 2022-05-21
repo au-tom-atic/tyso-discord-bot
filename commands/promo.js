@@ -18,7 +18,7 @@ module.exports = {
                     .setAuthor('Take Your Shoes Off Bot')
                     .setURL("https://rickglassman.com")
                     .setThumbnail(
-                        `https://images.squarespace-cdn.com/content/v1/5d2e1dea66dc3100014405a5/1578198447755-XJWQT8EVYYTQJIH4SC9J/The+Sixth+Lead+tshirt.png`
+                        `http://ifsfilm.com/2k16/program/filmpics/sixth.jpg`
                     )
                     .setDescription(
                         `TYSO is brought to you by:`

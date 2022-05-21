@@ -44,7 +44,7 @@ module.exports = class Youtube {
             });
         
             if (created) {
-                channel.send(`${data.channel.name} just uploaded a new video titled: ${data.video.title}. watch it at: ${data.video.link}`)
+                channel.send(`*${data.channel.name}* just uploaded a new video titled: "${data.video.title}". Watch it here: ${data.video.link}`)
             } else {
                 console.log("video updated, not sending discord msg")
             }

@@ -14,6 +14,9 @@ dotenv.config();
 let port = process.env.PORT || 3000;
 const prefix = '-';
 
+client.commands = new Discord.Collection();
+client.cooldowns = new Discord.Collection();
+
 const commandFiles = fs.readdirSync("./commands");
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);

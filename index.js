@@ -14,8 +14,9 @@ dotenv.config();
 let port = process.env.PORT || 3000;
 const prefix = '-';
 
+const commandFiles = fs.readdirSync("./commands");
 for (const file of commandFiles) {
-    const command = require(`./commands//${file}`);
+    const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
 }
 

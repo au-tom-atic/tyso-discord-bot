@@ -100,9 +100,9 @@ client.on("message", async (message) => {
 
 client.login(process.env.DISCORD_BOT);
 
-app.use("/youtube", youtube.getListener());
+app.use("/tyso-bot/youtube", youtube.getListener());
 
-app.get('/resubscribe', (req, res) => {
+app.get('/tyso-bot/resubscribe', (req, res) => {
   subscriber(config.subs);
   res.send(200)
 });

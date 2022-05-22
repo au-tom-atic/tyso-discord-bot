@@ -24,7 +24,7 @@ for (const file of commandFiles) {
 }
 
 
-var youtube = new Youtube(`https://${process.env.HEROKU_APP_NAME}.herokuapp.com/youtube`, client);
+var youtube = new Youtube(`https://au-tom-atic.com/tyso-bot/youtube`, client);
 
 client.once("ready", async () => {
     console.log('discord bot ready to send notifications');

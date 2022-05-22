@@ -5,7 +5,7 @@ dotenv.config();
 
 module.exports = {
     name: "theme",
-    aliases: ["t", "music", "theme-music", "theme_music", "tm"],
+    aliases: ["t", "music", "theme-music", "theme_music","thememusic","tm"],
     description: "TYSO Theme Music",
     cooldown: 5,
     args: false,

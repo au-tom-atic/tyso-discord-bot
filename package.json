@@ -2,9 +2,9 @@
   "name": "tyso-discord-bot",
   "version": "1.0.0",
   "description": "bot for the Take Your Shoes Off Podcast Discord",
-  "main": "index.js",
+  "main": "tyso-bot.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon tyso-bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

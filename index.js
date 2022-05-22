@@ -11,7 +11,7 @@ const client = new Discord.Client();
 const { append } = require("express/lib/response");
 
 dotenv.config();
-let port = process.env.PORT || 3000;
+let port = process.env.TYSO_PORT || 3000;
 const prefix = '-';
 
 client.commands = new Discord.Collection();

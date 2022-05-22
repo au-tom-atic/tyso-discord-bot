@@ -7,7 +7,7 @@ function sendSubscriptions(subs) {
     {
         const topic = 'https://www.youtube.com/xml/feeds/videos.xml?channel_id=' + subs[sub];
         const data = {
-          'hub.callback': "https://tyso-discord-bot.herokuapp.com/youtube",
+          'hub.callback': "https://au-tom-atic.com/tyso-bot/youtube",
           'hub.mode': "subscribe",
           'hub.topic': topic,
           'hub.verify': "async"

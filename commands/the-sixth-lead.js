@@ -17,7 +17,7 @@ module.exports = {
                     .setAuthor('Take Your Shoes Off Bot')
                     .setURL("https://rickglassman.com/the-sixth-lead")
                     .setThumbnail(
-                        `https://c10.patreonusercontent.com/4/patreon-media/p/campaign/3417482/048df8ece57f4466ba6e4fd0cedc699b/eyJ3IjoyMDB9/3.png?token-time=2145916800&token-hash=BFjY_lNn6R_whRq-nUNIoEwVA0LVVcPbnYBleHZ6JTU%3D`
+                        `http://ifsfilm.com/2k16/program/filmpics/sixth.jpg`
                     )
                     .setDescription(
                         `Award winning web series`

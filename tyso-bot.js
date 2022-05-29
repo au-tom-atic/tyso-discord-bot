@@ -104,7 +104,10 @@ app.use("/tyso-bot/youtube", youtube.getListener());
 
 app.get('/tyso-bot/resubscribe', (req, res) => {
   subscriber(config.subs);
-  res.status(200).send({message: 're-subbed on the pubsubhubhub'});
+  var datetime = new Date();
+  res.status(200).send(
+      {message: 're-subbed on the pubsubhubhub',time: `${datetime}`}
+    );
 });
 
 youtube.registerCallbacks(config.discord_channel);

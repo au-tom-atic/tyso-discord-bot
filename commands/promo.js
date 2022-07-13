@@ -1,6 +1,7 @@
 const { models } = require("../sequelize");
 const dotenv = require("dotenv");
 const Discord = require("discord.js");
+const promos  = require("./promos.json");
 //const videoQuery = require("../sequelize/controllers/promo.js");
 dotenv.config();
 
@@ -13,6 +14,20 @@ module.exports = {
     args: false,
     async execute(message)
     {
+        // create fields for embed
+        const fields = [];
+        // loop through commands
+        for (const promo in promos) {
+            // create field for command
+            console.log(promo)
+            const field = {
+                name: promo.name,
+                value: promo
+            };
+            // add field to fields
+            fields.push(field);
+        }
+
         let promoEmbeddedResponse = new Discord.MessageEmbed()
                     .setColor("#0099ff")
                     .setTitle(`TYSO Promos`)
@@ -31,6 +46,7 @@ module.exports = {
                             inline: true,
                         }
                     )
+                    .addFields(fields)
                     .setTimestamp()
                     .setFooter("rickglassman.com/store");
                 message.channel.send(promoEmbeddedResponse);

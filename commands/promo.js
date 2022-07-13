@@ -8,6 +8,7 @@ module.exports = {
     name: "promo",
     aliases: ["p"],
     description: "TYSO Promo Codes",
+    example: "-promo, -p",
     cooldown: 5,
     args: false,
     async execute(message)

@@ -7,6 +7,7 @@ module.exports = {
     name: "theme",
     aliases: ["t", "music", "theme-music", "theme_music","thememusic","tm"],
     description: "TYSO Theme Music",
+    example: "-theme, -t, -theme-music",
     cooldown: 5,
     args: false,
     async execute(message)

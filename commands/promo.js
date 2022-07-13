@@ -7,9 +7,9 @@ dotenv.config();
 
 module.exports = {
     name: "promo",
-    aliases: ["p"],
+    aliases: ["p", "promos"],
     description: "TYSO Promo Codes",
-    example: "-promo, -p",
+    example: "-promo, -promos, -p",
     cooldown: 5,
     args: false,
     async execute(message)

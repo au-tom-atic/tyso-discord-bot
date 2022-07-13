@@ -17,12 +17,12 @@ module.exports = {
         // create fields for embed
         const fields = [];
         // loop through commands
-        for (const promo in promos) {
+        for (const name in promos) {
             // create field for command
-            console.log(promo)
+            console.log(promos[name])
             const field = {
-                name: promo.name,
-                value: promo
+                name: name,
+                value: name
             };
             // add field to fields
             fields.push(field);
@@ -38,13 +38,6 @@ module.exports = {
                     )
                     .setDescription(
                         `TYSO is brought to you by:`
-                    )
-                    .addFields(
-                        {
-                            name: "Betterhelp",
-                            value: `https://betterhelp.com/tyso, use offer code TYSO for $10 off your first month`,
-                            inline: true,
-                        }
                     )
                     .addFields(fields)
                     .setTimestamp()

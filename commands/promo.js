@@ -20,12 +20,15 @@ module.exports = {
         for (const name in promos) {
             // create field for command
             console.log(promos[name].hasOwnProperty('code'))
+            let field_value =  '**pitch**: ' + promos[name].spiel
+                + '\n**Offer**: ' + promos[name].offer
+                + '\n**Link**: '  + promos[name].link;
+            
+            field_value += promos[name].hasOwnProperty('code') ? '\n**Code**: '  + promos[name].code : ''
+
             const field = {
                 name: name,
-                value: '**pitch**: ' + promos[name].spiel
-                + '\n**Offer**: ' + promos[name].offer
-                + '\n**Link**: '  + promos[name].link
-                + promos[name].hasOwnProperty('code') ? '\n**Code**: '  + promos[name].code : ''
+                value: field_value
             };
             // add field to fields
             fields.push(field);

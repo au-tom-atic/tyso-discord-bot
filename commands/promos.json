@@ -1,0 +1,41 @@
+{
+    "betterhelp": {
+        "name": "BetterHelp",
+        "spiel": "BetterHelp is customized online th,erapy that offers video, phone, and even live chat sessions with your therapist.",
+        "offer": "10% off your first month",
+        "link": "https://www.betterhelp.com/tyso"
+    },
+    "NextEvo": {
+        "name": "NextEvo Naturals",
+        "spiel": "Stop wondering if CBD is right for you. Try NextEvo Naturals capsules, gummies, mints, and topical creams",
+        "offer": "Get 25% off your first order of $40",
+        "link": "https://www.nextevo.com/",
+        "code": "TYSO"
+    },
+    "Helix Sleep": {
+        "name": "Helix Sleep",
+        "spiel": "Nervous about buying a mattress online? Don't be. Helix Sleep has over over 12,000 5-star reviews plus you have 100 nights to try it out, risk free",
+        "offer": "Get upto $200 off all mattress orders AND two free pillows",
+        "link": "https://www.helixsleep.com/tyso"
+    },
+    "Everlywell": {
+        "name": "BetterHelp",
+        "spiel": "Everlywell in an at-home lab test that can help you on the path to living your healthiest life!",
+        "offer": "TYSO listeners get 20% off an at-home lab test",
+        "link": "https://www.everlywell.com/tyso"
+    },
+    "nutrafol": {
+        "name": "Nutrafol",
+        "spiel": "You can grow thicker, healthier hair AND support TYSO",
+        "offer": "Save $15 off your first month's subscription",
+        "link": "https://www.nutrafol.com/men",
+        "code": "TYSO"
+    },
+    "BlueChew": {
+        "name": "BlueChew",
+        "spiel": "Try BlueChew and receive your first month FREE",
+        "offer": "10% off your first month",
+        "link": "https://www.bluechew.com/",
+        "code": "TYSO"
+    }
+}

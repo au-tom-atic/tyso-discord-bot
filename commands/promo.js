@@ -1,6 +1,7 @@
 const { models } = require("../sequelize");
 const dotenv = require("dotenv");
 const Discord = require("discord.js");
+const promos  = require("./promos.json");
 //const videoQuery = require("../sequelize/controllers/promo.js");
 dotenv.config();
 
@@ -13,6 +14,26 @@ module.exports = {
     args: false,
     async execute(message)
     {
+        // create fields for embed
+        const fields = [];
+        // loop through commands
+        for (const name in promos) {
+            // create field for command
+            console.log(promos[name].hasOwnProperty('code'))
+            let field_value =  '**pitch**: ' + promos[name].spiel
+                + '\n**Offer**: ' + promos[name].offer
+                + '\n**Link**: '  + promos[name].link;
+            
+            field_value += promos[name].hasOwnProperty('code') ? '\n**Code**: '  + promos[name].code : ''
+
+            const field = {
+                name: name,
+                value: field_value
+            };
+            // add field to fields
+            fields.push(field);
+        }
+
         let promoEmbeddedResponse = new Discord.MessageEmbed()
                     .setColor("#0099ff")
                     .setTitle(`TYSO Promos`)
@@ -24,13 +45,7 @@ module.exports = {
                     .setDescription(
                         `TYSO is brought to you by:`
                     )
-                    .addFields(
-                        {
-                            name: "Betterhelp",
-                            value: `https://betterhelp.com/tyso, use offer code TYSO for $10 off your first month`,
-                            inline: true,
-                        }
-                    )
+                    .addFields(fields)
                     .setTimestamp()
                     .setFooter("rickglassman.com/store");
                 message.channel.send(promoEmbeddedResponse);

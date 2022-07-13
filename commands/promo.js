@@ -22,7 +22,10 @@ module.exports = {
             console.log(promos[name])
             const field = {
                 name: name,
-                value: name
+                value: '**pitch**: ' + promos[name][spiel] 
+                + '\n**Offer**: ' + promos[name][offer] 
+                + '\n**Link**: '  + promos[name][link] 
+                + '\n**Code**: '  + promos[name][code] 
             };
             // add field to fields
             fields.push(field);
